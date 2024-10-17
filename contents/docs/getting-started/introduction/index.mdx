@@ -1,0 +1,107 @@
+---
+title: Introduction
+description: This section provides an overview of Introduction.
+---
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam iste dolorum tempore consectetur explicabo tempora provident quia maxime, molestiae, facilis aperiam et, error illum vel ullam? Quis architecto dolore ullam
+
+## Getting Started
+
+To begin using the Documentation Template, follow these simple steps:
+Here are all versions of the AriaDocs template, each crafted for specific use cases:
+
+- **Advanced Docs:** A comprehensive template offering extensive features for in-depth documentation needs. Perfect for larger projects that require detailed explanations and advanced configurations.  
+  [Explore the Advanced Docs](https://github.com/nisabmohd/Aria-Docs/tree/master)
+
+- **Lite Version:** A streamlined, no-frills template perfect for straightforward documentation needs.  
+  [Explore the Lite Version](https://github.com/nisabmohd/Aria-Docs/tree/minimal-docs)
+
+- **Version with Versioning:** A powerful option for projects that require historical documentation tracking. Manage multiple versions of your docs effortlessly.  
+  [Check out the Versioning Feature](https://github.com/nisabmohd/Aria-Docs/tree/version_docs)
+
+- **i18n Support Version (WIP):** Designed for international audiences, this version will offer comprehensive multilingual support.  
+  [Preview the i18n Support](https://github.com/nisabmohd/Aria-Docs/tree/i18n-support)
+
+### Quick Start
+
+You can create a new Ariadocs project using the command:
+
+```bash
+npx create-aria-doc <project-directory>
+```
+
+### Expected Output
+
+When you run the CLI, you can expect an output similar to this:
+
+```
+Creating a new Ariadocs project in /path/to/your/project from the master branch...
+Cloning Master (Full Documentation)...
+Ariadocs project successfully created in /path/to/your/project!
+
+Next steps:
+1. Navigate to your project directory:
+   cd <project-directory>
+2. Install dependencies:
+   npm install
+3. Start the development server:
+   npm run dev````````````
+```
+
+## Blockquotes
+
+Blockquotes are useful for emphasizing key points or quoting external sources:
+
+> "Documentation is a love letter that you write to your future self." - Damian Conway
+
+Feel free to use blockquotes to highlight important information or quotes relevant to your documentation.
+
+## Code Examples with switch
+
+Here a custom tab component from shadcn ui is used.
+
+<Tabs defaultValue="python" className="pt-5 pb-1">
+  <TabsList>
+    <TabsTrigger value="python">Python</TabsTrigger>
+    <TabsTrigger value="php">PHP</TabsTrigger>
+  </TabsList>
+  
+  <TabsContent value="python">
+    ```python {12} showLineNumbers
+    response = sdk.process_payment({
+        'amount': 1000,  # Amount in cents
+        'currency': 'USD',
+        'method': 'credit_card',
+        'card_details': {
+            'number': '4111111111111111',
+            'expiry': '12/23',
+            'cvv': '123',
+        },
+    })
+
+    print('Payment Successful:', response)
+    ```
+  </TabsContent>
+  
+  <TabsContent value="php">
+    ```php {12} showLineNumbers
+    $response = $sdk->processPayment([
+        'amount' => 1000, // Amount in cents
+        'currency' => 'USD',
+        'method' => 'credit_card',
+        'card_details' => [
+            'number' => '4111111111111111',
+            'expiry' => '12/23',
+            'cvv' => '123',
+        ],
+    ]);
+
+    echo 'Payment Successful: ' . json_encode($response);
+    ```
+  </TabsContent>
+</Tabs>
+
+
+## Conclusion
+
+Thank you for choosing the Documentation Template for your project. Whether you're documenting software, APIs, or processes, we're here to support you in creating clear and effective documentation. Happy documenting!
